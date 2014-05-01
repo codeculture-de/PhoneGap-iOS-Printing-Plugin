@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.codeculture.print"
+        version="1.0.0">
+
+    <name>Phonegap iOS print plugin</name>
+    <description>Print on iOS</description>
+    <license>MIT</license>
+    <keywords>print,pdf</keywords>
+    <repo>https://github.com/codeculture-de/PhoneGap-iOS-Printing-Plugin.git</repo>
+    <issue>https://github.com/codeculture-de/PhoneGap-iOS-Printing-Plugin/issues</issue>
+
+    <js-module src="www/Print.js" name="Print">
+        <clobbers target="window.Print" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Print">
+                <param name="ios-package" value="Print" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Print.h" />
+        <source-file src="src/ios/Print.m" />
+    </platform>
+
+</plugin>
