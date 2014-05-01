@@ -56,3 +56,5 @@ var Print =  {
         cordova.exec(callback, null, "Print", "isPrintingAvailable");
     }
 }
+
+module.exports = Print;
