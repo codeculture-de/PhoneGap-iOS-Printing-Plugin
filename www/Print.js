@@ -46,14 +46,14 @@ var Print =  {
         args.printHTML = printHTML;
         args.dialogLeftPos = dialogLeftPos;
         args.dialogTopPos = dialogTopPos;
-        cordova.exec( null, null, "Print", "print", [args] );
+        cordova.exec( success, fail, "Print", "print", [args] );
     },
 
     /*
      * Callback function returns {available: true/false}
      */
-    isPrintingAvailable: function(callback) {
-        cordova.exec(callback, null, "Print", "isPrintingAvailable", []);
+    isPrintingAvailable: function(callback, failCallback) {
+        cordova.exec(callback, failCallback, "Print", "isPrintingAvailable", []);
     }
 }
 
