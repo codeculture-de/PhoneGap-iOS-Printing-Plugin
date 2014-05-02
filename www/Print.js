@@ -53,7 +53,7 @@ var Print =  {
      * Callback function returns {available: true/false}
      */
     isPrintingAvailable: function(callback) {
-        cordova.exec(callback, null, "Print", "isPrintingAvailable");
+        cordova.exec(callback, null, "Print", "isPrintingAvailable", []);
     }
 }
 
